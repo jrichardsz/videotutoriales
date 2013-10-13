@@ -9,7 +9,6 @@
 	font-family: Arial, sans-serif;
 	font-size: 16px;
 }
-.Estilo15 {font-family: "Times New Roman", Times, serif; font-size: 14px;}
 -->
         </style>
 </head>
@@ -56,8 +55,22 @@
 				<div class="note" style="background-color: rgb(230, 230, 252); border: 1px solid rgb(209, 209, 232); padding: 20px; margin: 20px 0px; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;"> <strong>Aplicaci&oacute;n</strong><br />
   Una aplicaci&oacute;n OpenXava es un conjunto de m&oacute;dulos. Un m&oacute;dulo une un componente de negocio con uno o m&aacute;s controladores.</div>
 				<h4 style="margin: 0px 0px 20px;">&nbsp;</h4>
+                
 				<h4 class="Estilo12" style="margin: 0px 0px 20px;">Pasos para desplegar una aplicacion openxava en el tomcat</h4>
-				<p class="Estilo11" style="margin: 0px 0px 20px;">Descargar de la web el zip de openxava, los descomprimimos <span style="margin: 0px 0px 20px;">y con el eclipse abrir la carpeta workspace</span>:</p>
+				
+                <div class="editable" id="steps" style="margin: 0px; padding: 0px; color: rgb(65, 65, 65); font-family: Arial, Helvetica, sans-serif; font-size: 14px; background-color: rgb(249, 247, 241);">
+			<ol class="steps_list_2" style="margin: 0px; padding: 0px; list-style: none;">
+				<li style="margin: 0px; padding: 20px 20px 20px 80px; clear: both; border-bottom-width: 1px; border-bottom-style: dashed; border-bottom-color: rgb(191, 191, 191);">
+					<div class="step_num" style="margin: 0px 19px 0px 0px; padding: 0px; background-image: url(http://pad1.whstatic.com/skins/WikiHow/images/header.png); text-align: center; width: 31px; height: 31px; line-height: 31px; font-size: 1.45em; color: rgb(255, 255, 255); float: left; clear: right; background-position: -220px -80px; background-repeat: no-repeat no-repeat;">
+						1</div>
+					<div>
+                    <b class="whb" style="margin: 0px; padding: 0px;">Creaci&oacute;n del proyecto openxava</b>.</div>
+              </li>
+			</ol>
+		</div>
+                				
+  <p class="Estilo11" style="margin: 0px 0px 20px;">&nbsp;</p>
+                 <p class="Estilo11" style="margin: 0px 0px 20px;">Descargar de la web el zip de openxava, los descomprimimos <span style="margin: 0px 0px 20px;">y con el eclipse abrir la carpeta workspace</span>:</p>
   <div class="pic Estilo11" style="background-color: rgb(249, 249, 249); border: 1px solid rgb(221, 221, 221); margin: 20px 0px; padding: 20px; text-align: center; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;"><img src="img-to-load-0002.jpg" alt="" width="157" height="119" /></div>
   <p class="Estilo11" style="margin: 0px 0px 20px;">Viendo,en el eclipse algo como esto:</p>
   <div class="pic Estilo11" style="background-color: rgb(249, 249, 249); border: 1px solid rgb(221, 221, 221); margin: 20px 0px; padding: 20px; text-align: center; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;"><img src="img-to-load-0003.jpg" alt="" width="149" height="126" /></div>
@@ -65,8 +78,22 @@
   Vamos al proyecto OpenXavaPlantilla y ejecutamos CrearNuevoProyecto.xml </p>
   <div class="pic Estilo11" style="background-color: rgb(249, 249, 249); border: 1px solid rgb(221, 221, 221); margin: 20px 0px; padding: 20px; text-align: center; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;"><img src="img-to-load-0004.jpg" alt="" width="709" height="229" /></div>
   <p class="Estilo11" style="margin: 0px 0px 20px;">Nos pedir&aacute; un nombre para el proyecto : &quot;Empresa&quot;</p>
-  <div class="pic Estilo11" style="background-color: rgb(249, 249, 249); border: 1px solid rgb(221, 221, 221); margin: 20px 0px; padding: 20px; text-align: center; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;"><img src="img-to-load-0004.jpg" alt="" width="709" height="229" /></div>
-  <p class="Estilo11" style="margin: 0px 0px 20px;"><br>
+  <div class="pic Estilo11" style="background-color: rgb(249, 249, 249); border: 1px solid rgb(221, 221, 221); margin: 20px 0px; padding: 20px; text-align: center; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;"><img src="img-to-load-0005.jpg" alt="" width="393" height="133" /></div>
+  <p class="Estilo11" style="margin: 0px 0px 20px;">En estos pasos, openxava ha convertido nuestro proyecto java en un proyecto web openxava listo para empezar.<br>
+  Para visualizar estos cambios en el proyecto, seleccionamos el proyecto &quot;Empresa&quot; y pulsamos F5 para refrescar.</p>
+  <div class="pic Estilo11" style="background-color: rgb(249, 249, 249); border: 1px solid rgb(221, 221, 221); margin: 20px 0px; padding: 20px; text-align: center; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;"><img src="img-to-load-0006.jpg" alt="" width="135" height="189" /></div>
+  <h4 class="Estilo12" style="margin: 0px 0px 20px;"></h4>
+  <div class="editable" id="steps2" style="margin: 0px; padding: 0px; color: rgb(65, 65, 65); font-family: Arial, Helvetica, sans-serif; font-size: 14px; background-color: rgb(249, 247, 241);">
+    <ol class="steps_list_2" style="margin: 0px; padding: 0px; list-style: none;">
+      <li style="margin: 0px; padding: 20px 20px 20px 80px; clear: both; border-bottom-width: 1px; border-bottom-style: dashed; border-bottom-color: rgb(191, 191, 191);">
+        <div class="step_num" style="margin: 0px 19px 0px 0px; padding: 0px; background-image: url(https://github.com/jrichardsz/videotutoriales/raw/master/global-resources/templates/sub-item/header.png); text-align: center; width: 31px; height: 31px; line-height: 31px; font-size: 1.45em; color: rgb(255, 255, 255); float: left; clear: right; background-position: -220px -80px; background-repeat: no-repeat no-repeat;"> 2</div>
+        <div> <b class="whb" style="margin: 0px; padding: 0px;">Creaci&oacute;n de las entidades del sistema</b></div>
+      </li>
+    </ol>
+  </div>
+  <p class="Estilo11" style="margin: 0px 0px 20px;"></p>
+  <p class="Estilo11" style="margin: 0px 0px 5px;">Creamos un paquete con el nombre adecuado, ejemplo: <strong>com.empresa.modelo</strong></p>
+  <p class="Estilo11" style="margin: 0px 0px 5px;">Luego creamos creamos una clase mas o menos asi:<br>
   </p>
   <p class="Estilo11" style="margin: 0px 0px 20px;">&lt;script src=&quot;https://gist.github.com/jrichardsz/6958412.js&quot;&gt;&lt;/script&gt;</p>
   <p class="Estilo11" style="margin: 0px 0px 20px;">
