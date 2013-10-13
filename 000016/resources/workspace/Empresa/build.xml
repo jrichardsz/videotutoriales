@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+
+<project name="Empresa" basedir="." default="desplegarWar">
+
+	<property name="project" value="Empresa" />
+	<property name="ox3" value="true" />
+	<property file="../openxava.properties"/>
+	
+	<!-- 
+	Compila todos los .java y .groovy 
+	No necesitas llamarla si trabajas dentro de Eclipse
+	-->
+	<target name="compilar"> 
+		<ant antfile="../OpenXava/build.xml" target="compile"/>
+	</target>	    		
+	
+	<!-- Construye y despliega la aplicación en formato .war -->	
+	<target name="desplegarWar">
+		<!-- En un directorio 
+		<ant antfile="../OpenXava/build.xml" target="deploy"/>-->
+		<!-- En un archivo (no funciona muy bien en windows + tomcat)-->
+		<ant antfile="../OpenXava/build.xml" target="deployWar"/>
+		
+	</target>				
+	
+	<!--
+	Construye la aplicación en formato portlets. 
+	-->		
+	<target name="generarPortlets"> 
+		<ant antfile="../OpenXava/build.xml" target="generatePortlets"/>
+	</target>
+	
+	<!--
+	Actualiza este proyecto con la versión de OpenXava presente en el workspace.
+	Ha de llamarse después de actualizar la versión de OpenXava.
+	-->
+	<target name="actualizarOX">
+		<ant antfile="../OpenXava/build.xml" target="updateOX"/>
+	</target>
+	
+	<!--
+	Se conecta a tu base de datos y actualiza el esquema para que conincida con 
+	el actual de tu aplicación.	
+	Recuerda dar valor a la propiedad schema.path.
+	(También puedes usar directamente la tarea ant 'hibernatetool')
+	-->
+	<target name="actualizarEsquema">
+		<ant antfile="../OpenXava/build.xml" target="updateSchemaJPA">			
+			<property name="persistence.unit" value="junit"/>
+			<property name="schema.path" value="R:\RICHARD\JOB\JAVA7ICE\expos\openxava\lib\mysql-connector-java-5.1.18.jar"/>
+		</ant>
+	</target>	
+						
+</project>

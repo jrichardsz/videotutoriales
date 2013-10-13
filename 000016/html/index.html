@@ -10,14 +10,41 @@
 	font-size: 16px;
 }
 -->
+
+/* Better styles for embedding GitHub Gists */
+.line-data {
+    font-size:11px; font-family: Consolas,"Liberation Mono",Courier,monospace;
+}
+
+.line-numbers {
+    font-size:11px;
+    background-color: #ECECEC;
+    border-right: 1px solid #DDDDDD;
+    color: #AAAAAA;
+    padding: 0.0em;
+    text-align: right;
+}
+
+.line-pre {
+    font-size:11px;font-family: Consolas,"Liberation Mono",Courier,monospace;
+}
+
+        .Estilo13 {	font-size: 16;
+	font-family: "Courier New", Courier, monospace;
+	color: #FF0000;
+	font-weight: bold;
+}
+        .Estilo14 {
+	color: #0000FF;
+	font-weight: bold;
+}
         </style>
 </head>
 	<body>
-		<p>
-			<header>
+		<p>			
 			<h1>
 				<header style="color: rgb(60, 60, 60); font-family: Arial, sans-serif; font-size: 14px; line-height: 21px; background-color: rgb(255, 255, 255);">
-				<h1 style="margin: 0px 0px 6px; font-family: inherit; line-height: 1.2em; color: inherit; text-rendering: optimizelegibility; font-size: 32px; text-transform: capitalize; letter-spacing: -1px;">
+				<h1 style="margin: 0px 0px 6px; font-family: inherit; line-height: 1.2em; color: inherit; text-rendering: optimizelegibility; font-size: 32px; letter-spacing: -1px;">
 					Introduccion a Openxava - Eclipse + Tomcat</h1>
 				<p style="margin: 0px 0px 6px; font-family: inherit; line-height: 1.2em; color: inherit; text-rendering: optimizelegibility; font-size: 32px; text-transform: capitalize; letter-spacing: -1px;"><img src="img-to-load-000.jpg" alt="" width="242" height="43" /></p>
 			  <div class="post-meta" style="margin-bottom: 20px; color: rgb(153, 153, 153); border-bottom-width: 1px; border-bottom-style: dashed; border-bottom-color: rgb(221, 221, 221); padding-bottom: 20px;">
@@ -36,11 +63,12 @@
 				</div>
 <p style="margin: 0px 0px 20px;">
 					En esta oportunidad mostrare como usar el framework de desarrollo rapido:&nbsp; Opexava. Es muy   interesante este framework&nbsp; ya que puede ser una solucion rapida para   proyectos sin tiempo, para demos, incluso para proyectos empresariales.   Como todo tiene sus ventajas y desventajas. Pero no esta demas   conocerla.</p>
-<p style="margin: 0px 0px 20px;">Requisitos:</p>
+<p style="margin: 0px 0px 20px;"><strong>Requisitos:</strong></p>
 				<ol style="padding: 0px; margin: 0px 0px 12px 36px;">
 					<li style="line-height: 1.5;"><a href="http://www.openxava.org/es/web/guest/downloads">Openxava Framework</a></li>
-					<li><a href="https://github.com/jrichardsz/videotutoriales/tree/master/000016/resources/lib">Librerias</a></li>
-					<li style="line-height: 1.5;"><a href="http://www.wampserver.com/en/#download-wrapper">Mysql</a></li>
+					<li><a href="https://github.com/jrichardsz/videotutoriales/tree/master/000016/resources/lib">Librerias (ejb.jar - jta.jar)</a></li>
+					<li style="line-height: 1.5;"><a href="http://www.wampserver.com/en/#download-wrapper">Servidor de base de datos Mysql</a></li>
+					<li><a href="http://mvnrepository.com/artifact/mysql/mysql-connector-java/5.1.18">Driver o Middleware Mysql</a></li>
 					<li style="line-height: 1.5;"><a href="http://www.eclipse.org/downloads">Eclipse IDE</a></li>
 				</ol>
 <h4 style="margin: 50px 0px 4px; font-family: inherit; line-height: 36px; color: inherit; text-rendering: optimizelegibility; font-size: 22px;">
@@ -60,9 +88,9 @@
 				
                 <div class="editable" id="steps" style="margin: 0px; padding: 0px; color: rgb(65, 65, 65); font-family: Arial, Helvetica, sans-serif; font-size: 14px; background-color: rgb(249, 247, 241);">
 			<ol class="steps_list_2" style="margin: 0px; padding: 0px; list-style: none;">
-				<li style="margin: 0px; padding: 20px 20px 20px 80px; clear: both; border-bottom-width: 1px; border-bottom-style: dashed; border-bottom-color: rgb(191, 191, 191);">
-					<div class="step_num" style="margin: 0px 19px 0px 0px; padding: 0px; background-image: url(http://pad1.whstatic.com/skins/WikiHow/images/header.png); text-align: center; width: 31px; height: 31px; line-height: 31px; font-size: 1.45em; color: rgb(255, 255, 255); float: left; clear: right; background-position: -220px -80px; background-repeat: no-repeat no-repeat;">
-						1</div>
+			  <li style="margin: 0px; padding: 20px 20px 20px 20px; clear: both; border-bottom-width: 1px; border-bottom-color: rgb(191, 191, 191);">
+				<div class="step_num" style="margin: 0px 19px 0px 0px; padding: 0px; background-image: url(https://github.com/jrichardsz/videotutoriales/raw/master/global-resources/templates/sub-item/header.png); text-align: center; width: 31px; height: 31px; line-height: 31px; font-size: 1.45em; color: rgb(255, 255, 255); float: left; clear: right; background-repeat: no-repeat no-repeat;">
+				1</div>
 					<div>
                     <b class="whb" style="margin: 0px; padding: 0px;">Creaci&oacute;n del proyecto openxava</b>.</div>
               </li>
@@ -85,8 +113,8 @@
   <h4 class="Estilo12" style="margin: 0px 0px 20px;"></h4>
   <div class="editable" id="steps2" style="margin: 0px; padding: 0px; color: rgb(65, 65, 65); font-family: Arial, Helvetica, sans-serif; font-size: 14px; background-color: rgb(249, 247, 241);">
     <ol class="steps_list_2" style="margin: 0px; padding: 0px; list-style: none;">
-      <li style="margin: 0px; padding: 20px 20px 20px 80px; clear: both; border-bottom-width: 1px; border-bottom-style: dashed; border-bottom-color: rgb(191, 191, 191);">
-        <div class="step_num" style="margin: 0px 19px 0px 0px; padding: 0px; background-image: url(https://github.com/jrichardsz/videotutoriales/raw/master/global-resources/templates/sub-item/header.png); text-align: center; width: 31px; height: 31px; line-height: 31px; font-size: 1.45em; color: rgb(255, 255, 255); float: left; clear: right; background-position: -220px -80px; background-repeat: no-repeat no-repeat;"> 2</div>
+      <li style="margin: 0px; padding: 20px 20px 20px 20px; clear: both; border-bottom-width: 1px; border-bottom-color: rgb(191, 191, 191);">
+        <div class="step_num" style="margin: 0px 19px 0px 0px; padding: 0px; background-image: url(https://github.com/jrichardsz/videotutoriales/raw/master/global-resources/templates/sub-item/header.png); text-align: center; width: 31px; height: 31px; line-height: 31px; font-size: 1.45em; color: rgb(255, 255, 255); float: left; clear: right; background-repeat: no-repeat no-repeat;"> 2</div>
         <div> <b class="whb" style="margin: 0px; padding: 0px;">Creaci&oacute;n de las entidades del sistema</b></div>
       </li>
     </ol>
@@ -94,94 +122,139 @@
   <p class="Estilo11" style="margin: 0px 0px 20px;"></p>
   <p class="Estilo11" style="margin: 0px 0px 5px;">Creamos un paquete con el nombre adecuado, ejemplo: <strong>com.empresa.modelo</strong></p>
   <p class="Estilo11" style="margin: 0px 0px 5px;">Luego creamos creamos una clase mas o menos asi:<br>
-  </p>
-  <p class="Estilo11" style="margin: 0px 0px 20px;">&lt;script src=&quot;https://gist.github.com/jrichardsz/6958412.js&quot;&gt;&lt;/script&gt;</p>
-  <p class="Estilo11" style="margin: 0px 0px 20px;">
-					<em>File : pom.xml</em></p>
-				<div class="Estilo11">
-					<div>
-					  <pre class="code" style="padding: 10px; font-size: 13px; color: rgb(51, 51, 51); border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; line-height: 1.5; background-color: rgb(247, 247, 249); border: 1px solid rgb(209, 209, 232); margin-top: 0px; margin-bottom: 20px; overflow-x: auto;">
-						&lt;project ...&gt;
-	&lt;repositories&gt;
-		&lt;repository&gt;
-			&lt;id&gt;JBoss repository&lt;/id&gt;
-			&lt;url&gt;http://repository.jboss.org/nexus/content/groups/public/&lt;/url&gt;
-		&lt;/repository&gt;
-	&lt;/repositories&gt;
-&nbsp;
-	&lt;dependencies&gt;
-&nbsp;
-		&lt;dependency&gt;
-			&lt;groupId&gt;org.hibernate&lt;/groupId&gt;
-			&lt;artifactId&gt;hibernate-core&lt;/artifactId&gt;
-			&lt;version&gt;3.6.3.Final&lt;/version&gt;
-		&lt;/dependency&gt;
-&nbsp;
-		&lt;!-- slf4j-log4j --&gt;
-		&lt;dependency&gt;
-			&lt;groupId&gt;org.slf4j&lt;/groupId&gt;
-			&lt;artifactId&gt;slf4j-log4j12&lt;/artifactId&gt;
-			&lt;version&gt;1.6.1&lt;/version&gt;
-		&lt;/dependency&gt;
-&nbsp;
-	&lt;/dependencies&gt;
-&lt;/project&gt;</pre>
-					  </div>
-				</div>
-				
-                <span class="Estilo11">
-                <script src="https://gist.github.com/anonymous/6759968.js"></script>
-				</span>
-                <div class="note Estilo11" style="background-color: rgb(230, 230, 252); border: 1px solid rgb(209, 209, 232); padding: 20px; margin: 20px 0px; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;">
-					<strong>Where is slf4j-api.jar?</strong><br />
-					The&nbsp;<strong>slf4j-api.jar</strong>&nbsp;is defined as the dependency of &ldquo;<strong>hibernate-core</strong>&ldquo;, so , you do not need to declare it again.</div>
-				<div class="Estilo11">
-					<div style="margin: 20px 0px;"></div>
+  <script src="https://gist.github.com/jrichardsz/6958412.js"></script>
+  
+  
+  <div class="editable" id="steps3" style="margin: 0px; padding: 0px; color: rgb(65, 65, 65); font-family: Arial, Helvetica, sans-serif; font-size: 14px; background-color: rgb(249, 247, 241);">
+    <ol class="steps_list_2" style="margin: 0px; padding: 0px; list-style: none;">
+      <li style="margin: 0px; padding: 20px 20px 20px 20px; clear: both; border-bottom-width: 1px; border-bottom-color: rgb(191, 191, 191);">
+        <div class="step_num" style="margin: 0px 19px 0px 0px; padding: 0px; background-image: url(https://github.com/jrichardsz/videotutoriales/raw/master/global-resources/templates/sub-item/header.png); text-align: center; width: 31px; height: 31px; line-height: 31px; font-size: 1.45em; color: rgb(255, 255, 255); float: left; clear: right; background-repeat: no-repeat no-repeat;">3</div>
+        <div> <b class="whb" style="margin: 0px; padding: 0px;">Configuracion de la base de datos</b></div>
+      </li>
+    </ol>
   </div>
-				<h4 class="Estilo11" style="margin: 50px 0px 4px; line-height: 36px; color: inherit; text-rendering: optimizelegibility; font-size: 22px;">
-					2. Log4j properties file</h4>
-				<p class="Estilo11" style="margin: 0px 0px 20px;"> Create a &ldquo;<strong>log4j.properties</strong>&rdquo; file and put it into your project&rsquo;s classpath, see figure below :</p>
-				<div class="pic Estilo11" style="background-color: rgb(249, 249, 249); border: 1px solid rgb(221, 221, 221); margin: 20px 0px; padding: 20px; text-align: center; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;">
-					<img alt="configure log4j in hibernate" height="421" src="http://www.mkyong.com/wp-content/uploads/2009/12/configure-log4j-hibernate.png" style="max-width: 100%; height: auto; vertical-align: middle; border: 0px;" title="configure-log4j-hibernate" width="595" /></div>
-				<p class="Estilo11" style="margin: 0px 0px 20px;">
-					<em>File : log4.properties</em></p>
-				<div class="Estilo11">
-					<div>
-					  <pre class="code" style="padding: 10px; font-size: 13px; color: rgb(51, 51, 51); border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; line-height: 1.5; background-color: rgb(247, 247, 249); border: 1px solid rgb(209, 209, 232); margin-top: 0px; margin-bottom: 20px; overflow-x: auto;">
-						# Direct log messages to a log file
-log4j.appender.file=org.apache.log4j.RollingFileAppender
-log4j.appender.file.File=C:\\mkyongapp.log
-log4j.appender.file.MaxFileSize=1MB
-log4j.appender.file.MaxBackupIndex=1
-log4j.appender.file.layout=org.apache.log4j.PatternLayout
-log4j.appender.file.layout.ConversionPattern=%d{ABSOLUTE} %5p %c{1}:%L - %m%n
-&nbsp;
-# Direct log messages to stdout
-log4j.appender.stdout=org.apache.log4j.ConsoleAppender
-log4j.appender.stdout.Target=System.out
-log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
-log4j.appender.stdout.layout.ConversionPattern=%d{ABSOLUTE} %5p %c{1}:%L - %m%n
-&nbsp;
-# Root logger option
-log4j.rootLogger=INFO, file, stdout
-&nbsp;
-# Log everything. Good for troubleshooting
-log4j.logger.org.hibernate=INFO
-&nbsp;
-# Log all JDBC parameters
-log4j.logger.org.hibernate.type=ALL</pre>
-					  </div>
-				</div>
-				<p class="Estilo11" style="margin: 0px 0px 20px;"> With this log4j configuration, it will redirect all the logging output to console and also a file at &ldquo;<code style="padding: 4px; font-size: 12px; color: rgb(15, 59, 104); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; background-color: rgb(247, 247, 249); border: 1px solid rgb(225, 225, 232);">C:\\mkyongapp.log</code>&ldquo;.</p>
-				<div class="note Estilo11" style="background-color: rgb(230, 230, 252); border: 1px solid rgb(209, 209, 232); padding: 20px; margin: 20px 0px; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;">
-					<strong>Note</strong><br />
-					Hibernate provides many settings to let developer to decide what to log. Always refer to this&nbsp;<a href="http://docs.jboss.org/hibernate/core/3.6/reference/en-US/html/session-configuration.html#configuration-logging" style="color: rgb(15, 59, 104);" target="_blank">Hibernate Log Categories</a>, choose some and implement it in your log file.</div>
-				<h4 class="Estilo11" style="margin: 50px 0px 4px; line-height: 36px; color: inherit; text-rendering: optimizelegibility; font-size: 22px;">
-					3. Output</h4>
-				<p class="Estilo11" style="margin: 0px 0px 20px;"> Try run your Hibernate web application, all logging output will be logged in &ldquo;<code style="padding: 4px; font-size: 12px; color: rgb(15, 59, 104); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; background-color: rgb(247, 247, 249); border: 1px solid rgb(225, 225, 232);">C:\\mkyongapp.log</code>&rdquo; file. See figure below :</p>
-				<div class="pic Estilo11" style="background-color: rgb(249, 249, 249); border: 1px solid rgb(221, 221, 221); margin: 20px 0px; padding: 20px; text-align: center; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;">
-					<img alt="log4j output" height="357" src="http://www.mkyong.com/wp-content/uploads/2009/12/configure-log4j-hibernate-logfile.png" style="max-width: 100%; height: auto; vertical-align: middle; border: 0px;" title="configure-log4j-hibernate-logfile" width="640" /></div>
-				<div class="download Estilo11" style="padding: 40px 85px; border: 1px solid rgb(206, 235, 206); background-image: url(http://files.softicons.com/download/folder-icons/zyr-folder-icons-by-janik-baumgartner/png/48x48/Downloads.png); background-color: rgb(198,196,193); margin-bottom: 20px; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-position: 20px 20px; background-repeat: no-repeat no-repeat;">
+  <p class="Estilo11" style="margin: 0px 0px 20px;">&nbsp;</p>
+  <p class="Estilo11" style="margin: 0px 0px 20px;">Necesitamos cambiar solo estos archivos:</p>
+  <div class="pic Estilo11" style="background-color: rgb(249, 249, 249); border: 1px solid rgb(221, 221, 221); margin: 20px 0px; padding: 20px; text-align: center; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;"><img src="img-to-load-0010.jpg" alt="" width="211" height="258" /></div>
+  <p class="Estilo11" style="margin: 0px 0px 20px;"><strong>Persistence.xml</strong></p>
+
+  <script src="https://gist.github.com/jrichardsz/6963132.js"></script>
+  
+  <p class="Estilo11" style="margin: 0px 0px 20px;"><strong>hibernate.cfg.xml</strong></p>
+  
+<script src="https://gist.github.com/jrichardsz/6963258.js"></script>
+
+  <p class="Estilo11" style="margin: 0px 0px 20px;"><strong>build.xml</strong></p>
+  
+    <p class="Estilo11" style="margin: 0px 0px 5px;">Descargamos el driver de coneccion para nuestra base de datos. Para este ejemplo usaremos mysql.(<strong>Requisito numero 4</strong>)</p>
+    <p class="Estilo11" style="margin: 0px 0px 5px;">Luego en el archivo build, en el tag : <strong>&lt;target name=&quot;actualizarEsquema&quot;&gt;</strong> seteamos la ruta de este jar descargado:</p>
+    
+    <script src="https://gist.github.com/jrichardsz/6964009.js"></script>
+    
+    <p class="Estilo11" style="margin: 0px 0px 5px;">Este paso es solo para crear las tablas en la base de datos. Cuando se despliegue la aplicación, este jar debe estar incluido en el war o en nuestro servidor de aplicaciones.</p>
+    <p class="Estilo11" style="margin: 0px 0px 5px;">&nbsp;</p>
+    <p class="Estilo11" style="margin: 0px 0px 20px;"><strong>context.xml</strong></p>
+        <p class="Estilo11" style="margin: 0px 0px 5px;"><span class="Estilo11" style="margin: 0px 0px 5px;">Agregamos nuestro datasource en el archivo context.xml </span>del servidor de aplicaciones(tomcat). Ejemplo : <strong>R:\servers\apache-tomcat-7.0.39\conf</strong></p>
+  
+  <script src="https://gist.github.com/jrichardsz/6963382.js"></script>
+
+
+  <div class="note" style="background-color: rgb(230, 230, 252); border: 1px solid rgb(209, 209, 232);  margin: 20px 0px; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;">
+    <p><strong>Los  archivos resultantes son:</strong></p>
+    <ol class="Estilo11" style="padding: 0px; margin: 0px 0px 12px 36px;">
+				      <li style="line-height: 1.5;"><a href="https://gist.github.com/jrichardsz/6959893">persistence.xml</a></li>
+				      <li style="line-height: 1.5;"><a href="https://gist.github.com/jrichardsz/6959907">hibernate.cfg.xml</a></li>
+				      <li><a href="https://gist.github.com/jrichardsz/6964168">build.xml</a></li>
+				      <li><a href="https://gist.github.com/jrichardsz/6959949">context.xml</a></li>
+    </ol>
+  </div>
+  <p class="Estilo11" style="margin: 0px 0px 20px;">&nbsp;</p>
+  
+  <div class="editable" id="steps6" style="margin: 0px; padding: 0px; color: rgb(65, 65, 65); font-family: Arial, Helvetica, sans-serif; font-size: 14px; background-color: rgb(249, 247, 241);">
+    <ol class="steps_list_2" style="margin: 0px; padding: 0px; list-style: none;">
+      <li style="margin: 0px; padding: 20px 20px 20px 20px; clear: both; border-bottom-width: 1px; border-bottom-color: rgb(191, 191, 191);">
+        <div class="step_num" style="margin: 0px 19px 0px 0px; padding: 0px; background-image: url(https://github.com/jrichardsz/videotutoriales/raw/master/global-resources/templates/sub-item/header.png); text-align: center; width: 31px; height: 31px; line-height: 31px; font-size: 1.45em; color: rgb(255, 255, 255); float: left; clear: right; background-repeat: no-repeat no-repeat;">4</div>
+        <div> <b class="whb" style="margin: 0px; padding: 0px;">Creaci&oacute;n de las tablas en base de datos a partir del modelo</b></div>
+      </li>
+    </ol>
+  </div>
+  <p class="Estilo11" style="margin: 0px 0px 20px;">&nbsp;</p>
+  <p class="Estilo11" style="margin: 0px 0px 20px;">Hacemos lo siguiente:</p>
+  <p class="Estilo11" style="margin: 0px 0px 20px;">1.- Creamos el esquema &quot;empresa&quot; en nuestra base de datos (mysql para este ejemplo). Este nombre debe ser el mismo que el usado en el persistence.xml, hibernate.xml y context.xml:</p>
+  <pre class="Estilo13">"jdbc:mysql://localhost:3306/empresa&quot;</pre>
+<p class="Estilo11" style="margin: 0px 0px 20px;"><span class="Estilo11" style="margin: 0px 0px 20px;">2.- Iniciamos nuestro mysql y ejecutamos la tarea &quot;actualizar esquema&quot;</span> del build.xml:</p>
+<div class="pic Estilo11" style="background-color: rgb(249, 249, 249); border: 1px solid rgb(221, 221, 221); margin: 20px 0px; padding: 20px; text-align: center; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;"><img src="img-to-load-0008.jpg" alt="" width="135" height="196" /></div>
+<p class="Estilo11" style="margin: 0px 0px 5px;">Clic derecho en build.xml &gt; run as &gt; ant buil ... y seleccionamos &quot;actualizar esquema&quot;</p>
+<div class="pic Estilo11" style="background-color: rgb(249, 249, 249); border: 1px solid rgb(221, 221, 221); margin: 20px 0px; padding: 20px; text-align: center; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;"><img src="img-to-load-0012.jpg" alt="" width="507" height="214" /></div>
+<p class="Estilo11" style="margin: 0px 0px 5px;"><span class="Estilo11" style="margin: 0px 0px 5px;">Si to</span>do resulta bien, en la consola se vera algo como:</p>
+<p class="Estilo11" style="margin: 0px 0px 20px;"><a href="https://gist.github.com/jrichardsz/6964217">https://gist.github.com/jrichardsz/6964217</a></p>
+<p class="Estilo11" style="margin: 0px 0px 20px;">&nbsp;</p>
+<div class="editable" id="steps5" style="margin: 0px; padding: 0px; color: rgb(65, 65, 65); font-family: Arial, Helvetica, sans-serif; font-size: 14px; background-color: rgb(249, 247, 241);">
+    <ol class="steps_list_2" style="margin: 0px; padding: 0px; list-style: none;">
+      <li style="margin: 0px; padding: 20px 20px 20px 20px; clear: both; border-bottom-width: 1px; border-bottom-color: rgb(191, 191, 191);">
+        <div class="step_num" style="margin: 0px 19px 0px 0px; padding: 0px; background-image: url(https://github.com/jrichardsz/videotutoriales/raw/master/global-resources/templates/sub-item/header.png); text-align: center; width: 31px; height: 31px; line-height: 31px; font-size: 1.45em; color: rgb(255, 255, 255); float: left; clear: right; background-repeat: no-repeat no-repeat;">5</div>
+        <div> <b class="whb" style="margin: 0px; padding: 0px;">Generacion del artefacto o war</b></div>
+      </li>
+    </ol>
+  </div>
+  <p class="Estilo11" style="margin: 0px 0px 20px;">&nbsp;</p>
+  <p class="Estilo11" style="margin: 0px 0px 20px;">Openxava por defecto, tiene configurado un ant para poder deployar directamente el proyecto a el tomcat que viene en su zip:</p>
+  <div class="pic Estilo11" style="background-color: rgb(249, 249, 249); border: 1px solid rgb(221, 221, 221); margin: 20px 0px; padding: 20px; text-align: center; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;"><img src="img-to-load-0007.jpg" alt="" width="157" height="119" /></div>
+  <p class="Estilo11" style="margin: 0px 0px 20px;">Esto esta bien para una demo, pero en un entorno mas real, necesitaremos generar el war para poder desplegarlo o deployarlo en algun servidor de aplicaciones. Para ellos modificamos el archivo build.xml</p>
+  <div class="pic Estilo11" style="background-color: rgb(249, 249, 249); border: 1px solid rgb(221, 221, 221); margin: 20px 0px; padding: 20px; text-align: center; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;"><img src="img-to-load-0008.jpg" alt="" width="135" height="196" /></div>
+  <p class="Estilo11" style="margin: 0px 0px 5px;">&nbsp;</p>
+  
+  <script src="https://gist.github.com/jrichardsz/6959463.js"></script>
+  
+    <p class="Estilo11" style="margin: 0px 0px 5px;">Finalmente ejecutamos la tarea &quot;desplegar war&quot; de el build.xml asi: Clic derecho en build.xml &gt; run as &gt; ant buil ...</p>
+    <div class="pic Estilo11" style="background-color: rgb(249, 249, 249); border: 1px solid rgb(221, 221, 221); margin: 20px 0px; padding: 20px; text-align: center; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;"><img src="img-to-load-0009.jpg" alt="" width="507" height="214" /></div>
+    <p class="Estilo11" style="margin: 0px 0px 5px;"><span class="Estilo11" style="margin: 0px 0px 5px;">Si todo salio bien , en la consola se vera algo como esto :</span></p>
+    <p class="Estilo11" style="margin: 0px 0px 5px;"><a href="https://gist.github.com/jrichardsz/6959755">https://gist.github.com/jrichardsz/6959755</a></p>
+    
+  
+    
+  <p class="Estilo11" style="margin: 0px 0px 5px;">&nbsp;</p>
+        <div class="note" style="background-color: rgb(230, 230, 252); border: 1px solid rgb(209, 209, 232); padding: 20px; margin: 20px 0px; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;"> 
+          <p><strong>Nota:</strong> Al generar el war de esta forma, 3 jars son necesarios:</p>
+          <p><strong>ejb.jar, jta.jar y mysql-connector-java-5.1.18.jar (para este ejemplo es mysql)</strong></p>
+          <p>La solucion es agregar estos jars al war ya generado : <strong>Abrir el war con el winrar , 7zip u otra herramienta y agregar los jars en : Empresa.war &gt; WEB-INF\lib</strong></p>
+          <p> o agregar estos jar a nivel del servidor: <strong>x:\servers\apache-tomcat-7.0.39\lib</strong></p>
+        </div>
+        <div class="editable" id="steps4" style="margin: 0px; padding: 0px; color: rgb(65, 65, 65); font-family: Arial, Helvetica, sans-serif; font-size: 14px; background-color: rgb(249, 247, 241);">
+          <ol class="steps_list_2" style="margin: 0px; padding: 0px; list-style: none;">
+            <li style="margin: 0px; padding: 20px 20px 20px 20px; clear: both; border-bottom-width: 1px; border-bottom-color: rgb(191, 191, 191);">
+              <div class="step_num" style="margin: 0px 19px 0px 0px; padding: 0px; background-image: url(https://github.com/jrichardsz/videotutoriales/raw/master/global-resources/templates/sub-item/header.png); text-align: center; width: 31px; height: 31px; line-height: 31px; font-size: 1.45em; color: rgb(255, 255, 255); float: left; clear: right; background-repeat: no-repeat no-repeat;">4</div>
+              <div> <b class="whb" style="margin: 0px; padding: 0px;">Desplegar el  war en un servidor de aplicaciones (para este ejemplo tomcat)</b></div>
+            </li>
+          </ol>
+  </div>
+        <p class="Estilo11" style="margin: 0px 0px 5px;">&nbsp;</p>
+        <p class="Estilo11" style="margin: 0px 0px 5px;"><span class="Estilo11" style="margin: 0px 0px 5px;">Finalmente desplegamos el war como sabemos: copiamos el archivo <strong>Empresa.war</strong> a la carpeta </span></p>
+        <p class="Estilo11" style="margin: 0px 0px 5px;"><strong>x:\servers\apache-tomcat-7.0.39\webapps</strong> </p>
+        <p class="Estilo11" style="margin: 0px 0px 5px;">y ejecutamos el bat : <strong>startup.bat</strong> ubicado en : </p>
+        <p class="Estilo11" style="margin: 0px 0px 5px;"><span class="Estilo11" style="margin: 0px 0px 5px;"><strong>x:\servers\apache-tomcat-7.0.39\bin</strong></span></p>
+        <p class="Estilo11" style="margin: 0px 0px 5px;"><span class="Estilo11" style="margin: 0px 0px 5px;">Si todo sale bien, no deberian haber errores en el log del tomcat</span>.</p>
+        <p class="Estilo11" style="margin: 0px 0px 5px;">&nbsp;</p>
+        <div class="editable" id="steps7" style="margin: 0px; padding: 0px; color: rgb(65, 65, 65); font-family: Arial, Helvetica, sans-serif; font-size: 14px; background-color: rgb(249, 247, 241);">
+          <ol class="steps_list_2" style="margin: 0px; padding: 0px; list-style: none;">
+            <li style="margin: 0px; padding: 20px 20px 20px 20px; clear: both; border-bottom-width: 1px; border-bottom-color: rgb(191, 191, 191);">
+              <div class="step_num" style="margin: 0px 19px 0px 0px; padding: 0px; background-image: url(https://github.com/jrichardsz/videotutoriales/raw/master/global-resources/templates/sub-item/header.png); text-align: center; width: 31px; height: 31px; line-height: 31px; font-size: 1.45em; color: rgb(255, 255, 255); float: left; clear: right; background-repeat: no-repeat no-repeat;">5</div>
+              <div> <b class="whb" style="margin: 0px; padding: 0px;">Lanzar la aplicaci&oacute;n</b></div>
+            </li>
+          </ol>
+        </div>
+        <p class="Estilo11" style="margin: 0px 0px 5px;">&nbsp;</p>
+        <p class="Estilo11" style="margin: 0px 0px 5px;">Creamos la url de nuestra aplicaci&oacute;n:</p>
+        <p class="Estilo11" style="margin: 0px 0px 5px;"><span class="Estilo14">http://&lt;host-servidor-aplicaciones&gt;:&lt;port-servidor-aplicaciones&gt;/&lt;nombre-proyecto-eclipse&gt;/modules/&lt;nombre-pojo-java&gt;</span></p>
+        <p class="Estilo11" style="margin: 0px 0px 5px;">Para nuestro ejemplo, quedaria asi : </p>
+        <p class="Estilo11" style="margin: 0px 0px 5px;"><span class="Estilo14">http://localhost:8080/Empresa/modules/Cliente</span></p>
+  <p class="Estilo11" style="margin: 0px 0px 5px;">Si todo sale bien, en el log del tomcat se vera algo como: </p>
+  <p class="Estilo11" style="margin: 0px 0px 5px;"><a href="https://gist.github.com/jrichardsz/6964425">https://gist.github.com/jrichardsz/6964425</a></p>
+  <p class="Estilo11" style="margin: 0px 0px 5px;">y en el browser se vera asi :</p>
+  <div class="pic Estilo11" style="background-color: rgb(249, 249, 249); border: 1px solid rgb(221, 221, 221); margin: 20px 0px; padding: 20px; text-align: center; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;"><img src="img-to-load-0013.jpg" alt="" width="721" height="313" /></div>
+  <p class="Estilo11" style="margin: 0px 0px 5px;">&nbsp;</p>
+  <p class="Estilo11" style="margin: 0px 0px 5px;">&nbsp;</p>
+<div class="download Estilo11" style="padding: 40px 85px; border: 1px solid rgb(206, 235, 206); background-image: url(http://files.softicons.com/download/folder-icons/zyr-folder-icons-by-janik-baumgartner/png/48x48/Downloads.png); background-color: rgb(198,196,193); margin-bottom: 20px; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-position: 20px 20px; background-repeat: no-repeat;">
 					Download it &ndash;&nbsp;<a href="http://www.mkyong.com/wp-content/uploads/2009/12/Log4j-Hibernate-Example.zip" style="color: rgb(15, 59, 104);">Log4j-Hibernate-Example.zip</a>&nbsp;(7KB)</div>
 				<h3 class="Estilo11" style="margin: 50px 0px 4px; line-height: 36px; color: inherit; text-rendering: optimizelegibility; font-size: 22px;">
 					Reference</h3>
